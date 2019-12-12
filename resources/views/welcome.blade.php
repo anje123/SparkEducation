@@ -14,7 +14,7 @@
         <style>
             html, body {
                 background-color: #fff;
-                color: #FC766AFF;
+                color: white;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -50,7 +50,6 @@
             }
 
             .links > a {
-                color: #FC766AFF;
                 padding: 0 25px;
                 font-size: 17px;
                 font-weight: 800;
@@ -64,15 +63,15 @@
             }
         </style>
     </head>
-    <body style="background-image: url('{{ asset('asset/edu2.jpg')}}');">
+    <body style="background-image: url('{{ asset('asset/test.jpg')}}'">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a style="color: white" >THANK FOR REGISTRING WITH US</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a  style="color: white" href="{{ route('login') }}">Login</a>
+                        <a style="color: white" href="{{ route('register') }}">Register</a>
                     @endauth
                 </div>
             @endif
@@ -82,8 +81,9 @@
                     SPARK EDUCATION
                 </div>
 
-                <div style="font-size:30px" class="links">
-                    Track Your Ward Academic Performance and Welfare Weekly Using SMS And E-Mail
+                <div style="font-size:40px" class="text-white-50 mb-4">
+                    Are You Busy With Work ?
+                    Track Your Ward Academic Performance and Welfare Weekly Through SMS And E-Mail
                 </div>
             </div>
         </div>

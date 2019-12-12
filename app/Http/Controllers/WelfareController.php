@@ -6,12 +6,13 @@ require_once  __DIR__.'/../../../vendor/autoload.php';
 
 use Twilio\Rest\Client;
 use Twilio\Jwt\ClientToken;
-
+use Alert;
 use Barryvdh\DomPDF\Facade as PDF;
 use App\Attendance;
 use App\Behave;
 use App\Subject;
 use App\User;
+use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -28,6 +29,18 @@ class WelfareController extends Controller
     {
         return view('admin.student')->with('students',User::all());
     }
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function result()
+    {
+      $user_id =  Auth::user()->id;
+      $sub = Subject::where('user_id',$user_id);
+
+        return view('result',compact('sub'));
+        }
     /**
      * Show the form for creating a new resource.
      *
@@ -137,8 +150,9 @@ class WelfareController extends Controller
             ]
         );
 
+        Alert::message('Hello ','INFORMATION HAS BEEN SUCCESFUULY SENT')->autoclose(3000);
 
-        return redirect()->back();
+        return redirect()->route('student');
     }
     /**
      * Display the specified resource.

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Alert;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -52,7 +53,6 @@ class RegisterController extends Controller
             'firstName' => 'required|string|max:255',
             'lastName' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
             'parent_name' => 'required|string|max:255',
             'parent_phone' => 'required|string',
             'title' => 'required|string|max:6',
@@ -73,7 +73,7 @@ class RegisterController extends Controller
     {
         return User::create([
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'password' => Hash::make('test'),
             'parent_name' => $data['parent_name'],
             'parent_phone' => $data['parent_phone'],
             'title' => $data['title'],
@@ -81,5 +81,11 @@ class RegisterController extends Controller
             'firstName' => $data['firstName'],
             'lastName' => $data['lastName']
         ]);
+
+     Alert::message('Hello ','STUDENT HAS BEEN SUCCESFUULY REGISTERED')->autoclose(3000);
+
+
+
+
     }
 }

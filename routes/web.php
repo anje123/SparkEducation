@@ -19,11 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/student', 'WelfareController@student')->name('student');
+Route::get('/result', 'WelfareController@result')->name('result');
+
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/welfare/input/{id}', 'WelfareController@create')->name('welfare.input');
     Route::post('/welfare/store/{id}', 'WelfareController@store')->name('welfare.store');
-
 });
 
 

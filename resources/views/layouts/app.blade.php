@@ -17,19 +17,20 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet"
-href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <!-- SWEET-ALERT CDN -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body style="background-image: url('{{ asset('asset/edu2.jpg')}}');">
+<body style="background-image: url('{{ asset('asset/test.jpg')}}');">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel"style="background-image: url('{{ asset('asset/test.jpg')}}');" >
             <div class="container">
-                <a style="color: #FC766AFF" class="navbar-brand" href="{{ url('/') }}">
+                <a style="color: white" class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'SPARK EDUCATION') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -47,19 +48,19 @@ href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a style="color: #FC766AFF" class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a style="color: white" class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a style="color: #FC766AFF" class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a style="color: white" class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
-                                <a style="color: #FC766AFF" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a style="color: white" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                   Hi  {{ Auth::user()->firstName }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a style="color: #FC766AFF" class="dropdown-item" href="{{ route('logout') }}"
+                                    <a style="color: black" class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -83,11 +84,16 @@ href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 
                             <div class="col-lg-4">
                                 <ul class="list-group">
-                                   <li class="list-group-item"><a  style="color: #FC766AFF" href="{{route('home')}}">Home</a></li>
+                                   <li class="list-group-item"><a  style="color: black" href="{{route('home')}}">Home</a></li>
                                 </ul>
-                                <ul class="list-group">
-                                    <li  class="list-group-item"><a  style="color: #FC766AFF" href="{{route('student')}}">Student List</a></li>
-                                 </ul>
+                                @if (Auth::check())
+                                   @if (Auth::user()->admin)
+                                   <ul class="list-group">
+                                        <li  class="list-group-item"><a  style="color: black" href="{{route('student')}}">Student List</a></li>
+                                    </ul>
+                                   @endif
+                               @endif
+
                             </div>
                       @endif
 

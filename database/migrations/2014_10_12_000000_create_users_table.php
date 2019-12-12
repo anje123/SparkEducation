@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('parent_name');
             $table->string('parent_phone');
             $table->string('class');
+            $table->string('school');
             $table->boolean('admin')->default(0);
             $table->rememberToken();
             $table->timestamps();

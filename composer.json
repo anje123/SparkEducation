@@ -10,7 +10,8 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
-        "twilio/sdk": "^5.40"
+        "twilio/sdk": "^5.40",
+        "uxweb/sweet-alert": "^2.0"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

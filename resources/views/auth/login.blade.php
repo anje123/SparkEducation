@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div style='background-color: #FFB6C1' class="card-header">{{ __('Login') }}</div>
+                <div  class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
@@ -53,7 +53,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" style='background-color: #FFB6C1' class="btn">
+                                <button type="submit" class="btn">
                                     {{ __('Login') }}
                                 </button>
 
