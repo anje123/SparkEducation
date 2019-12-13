@@ -20,7 +20,7 @@
                     </th>
 
                     <th>
-                    EDIT
+                    SCHOOL
                     </th>
 
                     <th>
@@ -49,7 +49,7 @@
 
                             <td>
                                 <a href=""  class="btn btn-xs btn-info">
-                                Edit
+                               {{ $student->school }}
                                 </a>
                             </td>
 

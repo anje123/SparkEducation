@@ -86,13 +86,12 @@
                                 <ul class="list-group">
                                    <li class="list-group-item"><a  style="color: black" href="{{route('home')}}">Home</a></li>
                                 </ul>
-                                @if (Auth::check())
-                                   @if (Auth::user()->admin)
+                                @if(Auth::user()->admin)
+
                                    <ul class="list-group">
                                         <li  class="list-group-item"><a  style="color: black" href="{{route('student')}}">Student List</a></li>
                                     </ul>
-                                   @endif
-                               @endif
+                                    @endif
 
                             </div>
                       @endif

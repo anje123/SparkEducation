@@ -68,7 +68,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a style="color: white" >THANK FOR REGISTRING WITH US</a>
+                        <a style="color: white" >THANKS FOR REGISTRING WITH US ,YOU WILL CONTACTED ONCE The INFO IS COLLECTED FROM THE SCHOOL</a>
                     @else
                         <a  style="color: white" href="{{ route('login') }}">Login</a>
                         <a style="color: white" href="{{ route('register') }}">Register</a>
