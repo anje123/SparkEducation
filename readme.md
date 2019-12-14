@@ -9,8 +9,8 @@
 - Azeez Halimat Olubunmi  (UI/UX), olubunmi1998@gmail.com
 - Abraham Ugbeshe (Frontend Developer) abrahamugbeshe@gmail.com
 
-
-# Statistics has shown that most parent don't have time to go to their wards schools to check their children performance in school due to their tight schedule with their work.
+## Problem 
+   Statistics has shown that most parent don't have time to go to their wards schools to check their children performance in school due to their tight schedule with their work.
 
 ## Proposed Solution
 
