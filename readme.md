@@ -10,33 +10,21 @@
 - Abraham Ugbeshe (Frontend Developer) abrahamugbeshe@gmail.com
 
 
-# Problem
+# Statistics has shown that most parent don't have time to go to their wards schools to check their children performance in school due to their tight schedule with their work.
 
-Most Nigerian Parents mostly busy ones dont really have time for their  children and tend not to know how there childrens warefare is in school, these are the little issues that leads to suicide , poor performance of student, student missing classes,  
-depression
+## Proposed Solution
 
-# Proposed Solution
-
-A plateform for parents to be a track their children academic performance, punctuality, change in recent Behaivour of the student on a weekly basis through email, sms and Whatsapp this will help parents, mostly busy parent be able to track and understand, know how their children  welfare is in school on a weekly basis
+SPARK EDUCATION enable Parent to track their wards performance by receiving weekly messages of their wards performance in school via sms, emails.
 
 # Proposed Stack
 
-Laravel, Jquert, HTML, CSS and mysql 
+Laravel, Jquery, HTML, CSS and mysql 
 
 # Benefit
 
-- Reduces students suicide rate
-- Increase Academic performance of student
+- Reduces students depression rate
+- Increases Academic performance of student
 - Reduces students criminal activities rate
 - Good way for to understand their children more
 
-
-
-
-# How to setup project and run locally
-
-### Clone the repository 
-
-```
-```
 
